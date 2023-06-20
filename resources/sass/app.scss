@@ -1,0 +1,24 @@
+// Fonts
+@import url('https://fonts.bunny.net/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+main {
+    background-image: url('/img/vehicle.jpg');
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.centered-content {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* semi-transparent white */
+    padding: 20px;
+    border-radius: 10px;
+}
