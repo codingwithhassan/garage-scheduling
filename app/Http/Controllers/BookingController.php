@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\BookingResource;
 use App\Models\Booking;
 use App\Models\Vehicle;
 use Carbon\Carbon;
@@ -14,7 +15,7 @@ class BookingController extends Controller
      */
     public function index()
     {
-        //
+        return BookingResource::collection(Booking::with(['user', 'vehicle'])->orderBy('id', 'desc')->simplePaginate());
     }
 
     /**

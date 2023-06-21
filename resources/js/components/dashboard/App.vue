@@ -44,11 +44,9 @@ import {inject} from "vue";
 
 export default {
     mounted() {
-        console.log('App mounted.');
         const axios = inject('axios');
-        console.log('test')
         axios.get('/user')
-            .then(response => console.log(response.data))
+            .then(response => console.log("user:"+response.data))
             .catch(error => console.log(error));
     }
 }
