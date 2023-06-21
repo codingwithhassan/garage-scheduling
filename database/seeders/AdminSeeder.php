@@ -6,7 +6,7 @@ use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class UserSeeder extends Seeder
+class AdminSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -14,12 +14,13 @@ class UserSeeder extends Seeder
     public function run(): void
     {
         User::where('email', 'admin@example.com')->delete();
-        $admin = User::forceCreate([
+        User::forceCreate([
             'name' => 'admin',
             'email' => 'admin@example.com',
             'phone' => '00000000000',
             'password' => bcrypt('root'),
             'is_admin' => true,
+            'email_verified_at' => now(),
         ]);
     }
 }

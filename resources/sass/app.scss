@@ -7,10 +7,19 @@
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
 
-main {
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #d4cb8e;
+}
+
+.hero {
     background-image: url('/img/vehicle.jpg');
     background-size: cover;
     height: 100vh;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,4 +30,23 @@ main {
     background-color: rgba(255, 255, 255, 0.8); /* semi-transparent white */
     padding: 20px;
     border-radius: 10px;
+}
+
+#app{
+    width: 100%;
+    min-height: 100vh;
+}
+
+#sidebarMenu {
+    min-height: 100vh;
+
+    ul.nav > li.nav-item > .nav-link {
+        background-color: #f3eecb;
+        margin-top: 8px;
+    }
+
+    ul.nav > li.nav-item > .nav-link:hover, ul.nav > li.nav-item > .nav-link.active {
+        background-color: #d4cb8e;
+        color: black;
+    }
 }
